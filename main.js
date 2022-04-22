@@ -28,10 +28,11 @@ function createParticles() {
     scene.add( sphere );
     sphere.position.x = Math.random()*360 - 180;
     sphere.position.y = Math.random()*360 - 180;
-    sphere.position.z = Math.random()*360 - 180;
+    sphere.position.z = Math.random()*180 - 90;
 }}
 
 camera.position.z = 30;
+camera.position.y = -30;
 camera.lookAt( 0, 0, 0 );
 
 function animate() {
