@@ -38,5 +38,5 @@ span {
 }
 
 .technologies {
-    display: flex;
+    display: flex-wrap;
 }
