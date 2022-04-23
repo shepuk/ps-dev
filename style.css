@@ -1,3 +1,42 @@
 body {
     margin: 0;
 }
+
+img {
+    border-radius: 10px;
+    width: 40%;
+    height: auto;
+}
+
+span {
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.profile-pic {
+    background-size: cover;
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      object-fit: top;
+  }
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -9999;
+}
+
+.portfolio-main {
+    margin: 5%;
+}
+
+.title {
+    font-size: 1rem;
+}
+
+.technologies {
+    display: flex;
+}

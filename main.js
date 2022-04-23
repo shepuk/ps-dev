@@ -17,7 +17,7 @@ const renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-document.body.appendChild(renderer.domElement);
+document.getElementById("canvas").appendChild(renderer.domElement);
 
 function createParticles() {
     for (let i = 0; i < 500; i++) {
@@ -28,11 +28,11 @@ function createParticles() {
     scene.add( sphere );
     sphere.position.x = Math.random()*360 - 180;
     sphere.position.y = Math.random()*360 - 180;
-    sphere.position.z = Math.random()*180 - 90;
+    sphere.position.z = Math.random()*360 - 180;
 }}
 
-camera.position.z = 30;
 camera.position.y = -30;
+camera.position.x = 30;
 camera.lookAt( 0, 0, 0 );
 
 function animate() {
@@ -44,17 +44,6 @@ function animate() {
 
     renderer.render(scene, camera);
 }
-
-const curve = new THREE.CatmullRomCurve3( [
-    new THREE.Vector3( -10, 0, 0 ),
-    new THREE.Vector3( 0, 0, 10 ),
-    new THREE.Vector3( 10, 0, 0 ),
-    new THREE.Vector3( 0, 0, -10 ),
-    new THREE.Vector3( -10, 0, 0 ),
-] );
-
-
-
 
 // https://stackoverflow.com/questions/37370246/three-js-how-to-pivot-camera-around-a-vector3-point
 var period = 60; // rotation time in seconds
@@ -79,7 +68,14 @@ function render() {
   // Render.
 }
 
+//https://www.youtube.com/watch?v=8jP4xpga6yY&t=909s&ab_channel=TraversyMedia
+function onWindowResize () {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.update.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
 
+window.addEventListener("resize", onWindowResize, false);
 
 createParticles();
 animate();
