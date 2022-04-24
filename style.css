@@ -1,25 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+
 body {
     margin: 0;
 }
 
-img {
-    border-radius: 10px;
-    width: 40%;
-    height: auto;
+h1, h2, h3, h4 {
+    font-family: "Source Code Pro", sans-serif;
 }
 
 span {
-    margin-left: 3px;
-    margin-right: 3px;
+    margin: 3px;
 }
-
-.profile-pic {
-    background-size: cover;
-      height: 20rem;
-      width: 20rem;
-      border-radius: 50%;
-      object-fit: top;
-  }
 
 #canvas {
     position: absolute;
