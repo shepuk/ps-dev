@@ -79,3 +79,4 @@ window.addEventListener("resize", onWindowResize, false);
 
 createParticles();
 animate();
+

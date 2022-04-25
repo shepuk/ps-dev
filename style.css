@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
     margin: 0;
+    font-family: Roboto, sans-serif;
 }
 
 h1, h2, h3, h4 {
-    font-family: "Source Code Pro", sans-serif;
+    margin: 0!important;
 }
 
 span {
     margin: 3px;
+    display: flex;
+    justify-content: center;
 }
 
 #canvas {
@@ -26,8 +29,36 @@ span {
 
 .title {
     font-size: 1rem;
+    text-align: right;
+    margin-bottom: 2px!important;
+    color: rgb(173, 173, 173);
+    font-weight: 100;
 }
 
 .technologies {
     display: flex-wrap;
 }
+
+.seperator {
+    width: auto;
+    height: 1px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    margin-bottom: 20px;
+}
+
+i {
+    margin-left: 10px;
+}
+
+.tag {
+    font-size: 0.6em!important;
+}
+
+.project-title {
+    color: black;
+}
+
+.project-title:hover {
+    color: #485fc7;
+}
+
